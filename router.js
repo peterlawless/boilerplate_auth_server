@@ -12,7 +12,7 @@ module.exports = function(app) {
   // Any requests through '/' must first go through requireAuth step before
   // passing along to the request handler
   app.get('/', requireAuth, function(req, res) {
-    res.send({ hi: 'there' });
+    res.send({ message: 'You have accessed a protected resource' });
   });
   // first argument is the route
   // function accepts three arguments:
